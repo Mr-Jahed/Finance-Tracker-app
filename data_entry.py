@@ -39,3 +39,17 @@ def get_category():
 
 def get_description():
     return input("Enter a description (optional): ")
+
+if __name__ == "__main__":
+    date = get_date("Enter the date (dd-mm-yyyy) or press Enter for today's date: ", allow_default=True)
+    amount = get_amount()
+    category = get_category()
+    description = get_description()
+
+    print("\nData Entered:")
+    print(f"Date: {date}")
+    print(f"Amount: {amount}")
+    print(f"Category: {category}")
+    print(f"Description: {description if description else 'N/A'}")
+    
+    
