@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  finance-tracker-app:
+    build: .
+    container_name: finance-tracker-app
+    stdin_open: true   # 👈 keeps STDIN open
+    tty: true    
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
